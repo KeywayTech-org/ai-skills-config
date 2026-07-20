@@ -9,13 +9,13 @@
 安装 Node.js 18 或更高版本后，运行：
 
 ```bash
-npx -y @keywaytech/ai-skills
+npx -y --package=@keywaytech/ai-skills ai-skills
 ```
 
 只查看将执行的操作：
 
 ```bash
-npx -y @keywaytech/ai-skills --dry-run
+npx -y --package=@keywaytech/ai-skills ai-skills --dry-run
 ```
 
 ## 安装器行为

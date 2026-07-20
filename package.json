@@ -1,10 +1,10 @@
 {
   "name": "@keywaytech/ai-skills",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "KeywayTech AI skills 的跨 Agent 一键安装器",
   "license": "MIT",
   "bin": {
-    "keyway-skills": "bin/ai-skills.cjs"
+    "ai-skills": "bin/ai-skills.cjs"
   },
   "files": ["bin", "code", "work", "find-skills", "README.md"],
   "engines": { "node": ">=18" },
