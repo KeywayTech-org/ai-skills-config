@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git PR"
+  short_description: "Finish git work with PR merge and branch cleanup."
+  default_prompt: "Finish the current git branch by committing changes, opening or merging a PR, updating local main, and cleaning stale branches."

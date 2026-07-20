@@ -1,0 +1,4 @@
+interface:
+  display_name: "Todo Planner"
+  short_description: "Generate executable atomic TODO plans"
+  default_prompt: "Plan TODO"

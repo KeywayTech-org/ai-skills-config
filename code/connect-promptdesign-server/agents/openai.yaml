@@ -1,0 +1,4 @@
+interface:
+  display_name: "PromptDesign Server Connect"
+  short_description: "Password-free PromptDesign production server access"
+  default_prompt: "Use $connect-promptdesign-server to connect to the PromptDesign server."
