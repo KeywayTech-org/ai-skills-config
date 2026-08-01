@@ -3,7 +3,20 @@
   "version": "1.0.2",
   "description": "KeywayTech AI skills 集合（跨 Agent 复用）",
   "license": "MIT",
-  "files": ["README.md", "Agents.md", "scripts", "*", "!.*"],
-  "engines": { "node": ">=18" },
-  "publishConfig": { "access": "public" }
+  "files": [
+    "README.md",
+    "Agents.md",
+    "scripts",
+    "*",
+    "!.*"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@dietrichgebert/ponytail": "^4.8.4"
+  }
 }
