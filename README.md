@@ -1,47 +1,28 @@
 # KeywayTech AI Skills
 
-面向多种 AI Agent 和 IDE 的中文 skills 集合与一键安装器。
+面向多种 AI Agent 和 IDE 的中文 skills 集合。
 
-本仓库包含开发类 skills（`code/`）、工作交付类 skills（`work/`）及通用 skills（`find-skills/`）。
+本仓库 skills 平铺在根目录下，每个 skill 是一个包含 `SKILL.md` 的独立目录。
 
-## 一键安装
+## 快速使用
 
-安装 Node.js 18 或更高版本后，运行：
+- **更新并部署 skills**：运行 [`scripts/update-skills.ps1`](scripts/update-skills.ps1)，拉取本仓库及配置的内部源仓库最新提交，然后**自动复制部署**到本机已安装的 Agent。
+- **仅部署到 Agent**：运行 [`scripts/deploy-skills.ps1`](scripts/deploy-skills.ps1)，将本仓库 skills **复制**到本机已安装的 Agent skills 目录（仅覆盖同名 skill，不影响其他 skill）。
 
-```bash
-npx -y --package=@keywaytech/ai-skills ai-skills
-```
-
-只查看将执行的操作：
-
-```bash
-npx -y --package=@keywaytech/ai-skills ai-skills --dry-run
-```
-
-## 安装器行为
-
-安装器会：
-
-- 自动识别 Codex、Claude Code、Trae、Gemini、Kimi、Qwen、Cursor、Windsurf 等已安装工具；也会扫描用户主目录下已有的 `*/skills` 目录。
-- 将本包内容同步到稳定的本机管理目录：`~/.keywaytech/ai-skills`。
-- 为每个已识别工具的 skills 目录创建目录联接，不依赖临时 npx 缓存。
-- 通过 `SKILL.md` 内容哈希去重：内容一致时跳过；同名但内容不同则不覆盖，并输出中文错误说明。
-- 在权限不足、包内容缺失、目标冲突或未识别工具时输出中文自然语言错误。
-
-首次安装后，请重启对应 Agent 或 IDE，使其重新读取 skills。
+详细说明见 [`Agents.md`](Agents.md)。
 
 ## 目录结构
 
 ```text
-code/          开发、测试、Git、前端与工程流程 skills
-work/          品牌、营销、文档、内容与设计交付 skills
-find-skills/   通用 skill 发现工具
-bin/           npx 安装器
+<skill-name>/   单个 skill 目录，必须包含 SKILL.md
+scripts/        PowerShell 脚本：更新、部署
+Agents.md       给 Agent 的使用说明
+README.md       本文件
 ```
 
 ## Skills 中文说明
 
-### 开发与工程（`code/`）
+### 开发与工程
 
 | Skill | 用途 |
 | --- | --- |
@@ -65,7 +46,7 @@ bin/           npx 安装器
 | `supercent-io-performance-optimization` | 定位并优化应用性能瓶颈。 |
 | `vercel-labs-vercel-react-best-practices` | 应用 React 与 Next.js 性能最佳实践。 |
 
-### 工作与业务（`work/`）
+### 工作与业务
 
 | 功能组 | 包含 skill | 中文用途 |
 | --- | --- | --- |
@@ -80,16 +61,17 @@ bin/           npx 安装器
 
 ### 未检测到工具
 
-请先安装目标 Agent/IDE，或先创建其 skills 目录后重试。例如 Codex 使用 `~/.codex/skills`，Trae 使用 `~/.trae-cn/skills`。
+运行 `scripts/deploy-skills.ps1` 前，请先安装目标 Agent/IDE，或手动创建其 skills 目录。常见路径见 `Agents.md`。
 
 ### 出现同名冲突
 
-安装器不会覆盖已有的不同版本。请人工比较冲突目录，确认后删除或改名旧目录，再重新运行安装命令。
+部署脚本默认不会覆盖已有的不同版本 skill。请人工比较冲突目录，确认后删除或改名旧目录，再重新运行部署脚本。
 
-### Windows 无法创建联接
+### 删除 skill 后如何同步
 
-请以有权限的账户运行终端；若系统策略限制创建目录联接，请启用开发者模式或联系管理员。
+删除 `ai-skills` 仓库根目录下的 skill 目录后，运行 `scripts/update-skills.ps1` 或 `scripts/deploy-skills.ps1` 时会检测 git 工作区变动，并询问是恢复误删还是同步删除到所有 Agent。选择“同步删除”即可从本机所有 Agent skills 目录中移除该 skill。
 
 ## 维护
 
-本仓库作为统一 Git 仓库维护，不包含自动上游更新功能。修改后提交并推送即可分发新的 npm 包版本。
+- 使用 `scripts/update-skills.ps1` 拉取本仓库及内部源仓库的最新提交。
+- 修改后提交并推送即可分发新的 npm 包版本。

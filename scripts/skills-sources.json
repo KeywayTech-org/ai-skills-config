@@ -1,0 +1,42 @@
+﻿{
+  "comment": "内部 skills 源仓库列表。update-skills.ps1 会拉取下列所有仓库。",
+  "note": "localPath 是相对于仓库根目录的相对路径。将 private/内部仓库添加到此列表即可纳入统一更新。", 
+  "sources": [
+    {
+      "name": "ai-skills",
+      "url": "https://github.com/Keyway-Tech/ai-skills.git",
+      "localPath": ".",
+      "description": "本仓库：KeywayTech AI skills 主集合"
+    },
+    {
+      "name": "easy-naming",
+      "url": "https://github.com/Keyway-Tech/easy-naming.git",
+      "localPath": "../easy-naming",
+      "description": "产品/品牌命名 skill"
+    },
+    {
+      "name": "gift-picker",
+      "url": "https://github.com/Keyway-Tech/gift-picker.git",
+      "localPath": "../gift-picker",
+      "description": "礼物挑选助手 skill"
+    },
+    {
+      "name": "geo-professer",
+      "url": "https://github.com/Keyway-Tech/geo-professer.git",
+      "localPath": "../geo-professer",
+      "description": "国内本地商户 GEO 审计 skill"
+    },
+    {
+      "name": "redbook-cover-gen",
+      "url": "https://github.com/Keyway-Tech/redbook-cover-gen.git",
+      "localPath": "../redbook-cover-gen",
+      "description": "小红书封面生成 skill"
+    },
+    {
+      "name": "redbook-post-gen",
+      "url": "https://github.com/Keyway-Tech/redbook-post-gen.git",
+      "localPath": "../redbook-post-gen",
+      "description": "小红书图文生成 skill"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+﻿{
+  "comment": "常见 AI Agent / IDE 的 skills 存放目录配置。deploy-skills.ps1 会按此列表探测本机已安装的工具。",
+  "note": "路径中的 ~ 会被替换为用户主目录。targetDir 是 skills 实际存放目录；detectDir 用于判断该工具是否安装。",
+  "agents": [
+    {
+      "name": "claude-code",
+      "displayName": "Claude Code",
+      "detectDirs": ["~/.claude"],
+      "targetDirs": ["~/.claude/skills"],
+      "verified": true,
+      "source": "https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/skills",
+      "notes": "Skills 标准制定者。全局 skills 放在 ~/.claude/skills，项目级放在 .claude/skills。"
+    },
+    {
+      "name": "codex",
+      "displayName": "OpenAI Codex CLI",
+      "detectDirs": ["~/.codex"],
+      "targetDirs": ["~/.codex/skills"],
+      "verified": true,
+      "source": "https://github.com/openai/codex",
+      "notes": "全局 skills 目录。也可在 ~/.codex/config.toml 中通过 skills.directory 自定义。"
+    },
+    {
+      "name": "cursor",
+      "displayName": "Cursor",
+      "detectDirs": ["~/.cursor"],
+      "targetDirs": ["~/.cursor/skills"],
+      "verified": true,
+      "source": "社区资料",
+      "notes": "几乎无缝兼容 Claude Skills。全局 skills 放在 ~/.cursor/skills。"
+    },
+    {
+      "name": "gemini-cli",
+      "displayName": "Gemini CLI",
+      "detectDirs": ["~/.gemini"],
+      "targetDirs": ["~/.gemini/skills"],
+      "verified": false,
+      "source": "https://github.com/google-gemini/gemini-cli",
+      "notes": "实验性支持。Workspace 级放在 .gemini/skills；全局目录 ~/.gemini/skills 待官方确认。"
+    },
+    {
+      "name": "opencode",
+      "displayName": "OpenCode",
+      "detectDirs": ["~/.opencode", "~/.config/opencode"],
+      "targetDirs": ["~/.opencode/skills", "~/.config/opencode/skills"],
+      "verified": true,
+      "source": "https://opencode.ai/docs/zh-cn/skills/",
+      "notes": "全局配置可放在 ~/.opencode/skills 或 ~/.config/opencode/skills；项目级放在 .opencode/skills。"
+    },
+    {
+      "name": "trae",
+      "displayName": "Trae / Trae-CN",
+      "detectDirs": ["~/.trae", "~/.trae-cn"],
+      "targetDirs": ["~/.trae/skills", "~/.trae-cn/skills"],
+      "verified": false,
+      "source": "社区资料 / 旧安装器约定",
+      "notes": "国内版 Trae 路径通常为 ~/.trae-cn，国际版为 ~/.trae。部分版本仅支持通过 IDE 技能市场导入。"
+    },
+    {
+      "name": "kimi",
+      "displayName": "Kimi Code / Kimi K2 Code",
+      "detectDirs": ["~/.kimi"],
+      "targetDirs": ["~/.kimi/skills"],
+      "verified": false,
+      "source": "社区资料",
+      "notes": "Kimi Code 实验性 Skills 支持，目录约定参考 ~/.kimi/skills，待官方确认。"
+    },
+    {
+      "name": "qwen",
+      "displayName": "Qwen Code",
+      "detectDirs": ["~/.qwen"],
+      "targetDirs": ["~/.qwen/skills"],
+      "verified": false,
+      "source": "社区资料",
+      "notes": "Qwen Code v0.6.0+ 实验性 Skills 支持。目录约定参考 ~/.qwen/skills。"
+    },
+    {
+      "name": "windsurf",
+      "displayName": "Windsurf (Codeium)",
+      "detectDirs": ["~/.windsurf"],
+      "targetDirs": ["~/.windsurf/rules"],
+      "verified": false,
+      "source": "https://docs.windsurf.com/zh/windsurf/cascade/memories",
+      "notes": "Windsurf 使用 AI Rules / Memories，不是标准 Skills 格式。部署时可将 SKILL.md 作为规则文件放入 ~/.windsurf/rules，但可能需要手动调整。"
+    },
+    {
+      "name": "vscode-copilot",
+      "displayName": "VS Code + GitHub Copilot",
+      "detectDirs": ["~/.vscode"],
+      "targetDirs": [],
+      "verified": false,
+      "source": "https://code.visualstudio.com/docs/copilot/customization/agent-skills",
+      "notes": "Copilot Agent Skills 通过 VS Code settings 配置，不依赖文件系统 skills 目录。暂不支持直接部署。"
+    },
+    {
+      "name": "aider",
+      "displayName": "Aider",
+      "detectDirs": ["~/.aider"],
+      "targetDirs": [],
+      "verified": false,
+      "source": "https://aider.chat/",
+      "notes": "Aider 不采用 SKILL.md 格式的 skills 机制。暂不支持直接部署。"
+    }
+  ],
+  "fallback": {
+    "scanHomeForSkillsDirs": true,
+    "comment": "兜底扫描：当已知 Agent 都未检测到时，扫描用户主目录下所有 */skills 目录。"
+  }
+}
