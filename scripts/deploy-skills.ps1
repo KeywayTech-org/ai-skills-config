@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env pwsh
+#!/usr/bin/env pwsh
 #Requires -Version 5.1
 <#
 .SYNOPSIS
@@ -61,7 +61,7 @@ try {
 }
 
 $homeDir = $HOME
-$isWindows = $env:OS -eq "Windows_NT"
+$isWindowsOS = $env:OS -eq "Windows_NT"
 
 function Expand-HomePath {
     param([string]$Path)
@@ -75,7 +75,7 @@ function Get-SkillHash {
     param([string]$SkillDir)
     $manifest = Join-Path $SkillDir "SKILL.md"
     if (-not (Test-Path $manifest)) { return $null }
-    if ($isWindows) {
+    if ($isWindowsOS) {
         $bytes = [System.IO.File]::ReadAllBytes($manifest)
         $sha = [System.Security.Cryptography.SHA256]::Create()
         $hash = $sha.ComputeHash($bytes)
@@ -88,7 +88,7 @@ function Get-SkillHash {
 function Test-SameTarget {
     param([string]$LinkPath, [string]$TargetPath)
     try {
-        if ($isWindows) {
+        if ($isWindowsOS) {
             $item = Get-Item $LinkPath -ErrorAction Stop
             if ($item.Attributes -band [System.IO.FileAttributes]::ReparsePoint) {
                 $realLink = $item.Target
@@ -139,7 +139,9 @@ function Get-DeletedSkillDirsFromGit {
         $hasInHead = $false
         try {
             $null = git -C $repoRoot cat-file -e "HEAD:$dirName/SKILL.md" 2>$null
-            $hasInHead = $true
+            if ($LASTEXITCODE -eq 0) {
+                $hasInHead = $true
+            }
         } catch {}
         $existsNow = Test-Path (Join-Path $repoRoot "$dirName\SKILL.md")
         if ($hasInHead -and -not $existsNow) {
@@ -355,7 +357,7 @@ function Deploy-Skill {
             Copy-Item -Path $SourceDir -Destination $destination -Recurse -Force
             Write-Success "  $skillName 已复制"
         } else {
-            if ($isWindows) {
+            if ($isWindowsOS) {
                 # Windows 目录联接不需要管理员权限（多数场景），且跨卷也可用
                 cmd /c mklink /J "$destination" "$SourceDir" | Out-Null
             } else {
