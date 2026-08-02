@@ -29,7 +29,6 @@ README.md       本文件
 | `0xdarkmatter-structural-search` | 使用 AST 进行结构化代码搜索与安全模式检索。 |
 | `89jobrien-security-engineering` | 进行应用安全架构、威胁建模与漏洞治理。 |
 | `addyosmani-code-review-and-quality` | 从正确性、性能、可维护性等维度审查代码。 |
-| `agentspace-so-find-skills` | 搜索、筛选和安装适合任务的 Agent skill。 |
 | `autumnsgrove-git-advanced` | 处理高级 Git 工作流、变基、冲突和恢复。 |
 | `c0ntr0lledcha0s-analyzing-patterns` | 识别代码模式、重复结构和设计问题。 |
 | `c0ntr0lledcha0s-analyzing-test-quality` | 评估测试覆盖、断言质量和测试风险。 |
