@@ -1,0 +1,4 @@
+interface:
+  display_name: "Screenshot HD"
+  short_description: "4K iPhone 15 Pro Max screenshots with Playwright"
+  default_prompt: "Use $screenshot-hd to capture a sharp, shell-free iPhone 15 Pro Max screenshot with Playwright."
