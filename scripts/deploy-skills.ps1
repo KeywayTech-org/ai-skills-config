@@ -1,11 +1,12 @@
-#!/usr/bin/env pwsh
+﻿#!/usr/bin/env pwsh
 #Requires -Version 5.1
 <#
 .SYNOPSIS
     将 ai-skills 仓库中的 skills 平铺部署到本机已安装的 Agent skills 目录。
 .DESCRIPTION
-    读取 scripts/agent-targets.json，自动探测本机已安装的 Agent（Claude Code、Codex、Cursor、Trae 等），
-    并将 ai-skills 根目录下所有包含 SKILL.md 的 skill 目录部署到对应 Agent 的 skills 目录。
+    读取 scripts/agent-targets.json（纯 paths 配置的 JSON 数组），
+    对每个路径展开 ~ 并检查是否存在；存在的目标目录才部署，不存在则跳过（绝不新建目录）。
+    将 ai-skills 根目录下所有包含 SKILL.md 的 skill 目录部署到这些目标目录。
     默认使用复制方式部署；后续执行 deploy-skills.ps1 会再次覆盖同名 skill，不会影响目录中的其他 skill。
     通常用于用户说“部署 skills”时执行。
 .PARAMETER DryRun
@@ -222,69 +223,25 @@ function Remove-SkillsFromAgents {
 }
 
 function Discover-Agents {
+    # agent-targets.json 现在是纯路径数组（JSON array of strings）。
+    # 每个路径展开 ~ 后检查是否存在：存在才纳入部署，不存在则跳过（绝不新建目录）。
     $detected = @()
-    foreach ($agent in $config.agents) {
-        $foundDetectDir = $null
-        foreach ($d in $agent.detectDirs) {
-            $expanded = Expand-HomePath $d
-            if (Test-Path $expanded) {
-                $foundDetectDir = $expanded
-                break
-            }
+    foreach ($rawPath in $config) {
+        $expanded = Expand-HomePath $rawPath
+        if (-not $expanded) { continue }
+        if (-not (Test-Path $expanded)) {
+            Write-Warn "目标目录不存在，跳过（按配置不新建）：$($expanded -replace [regex]::Escape($homeDir), '~')"
+            continue
         }
-        if ($foundDetectDir) {
-            $validTargetDirs = @()
-            foreach ($t in $agent.targetDirs) {
-                $expanded = Expand-HomePath $t
-                if ($expanded -and (Test-Path $expanded)) { $validTargetDirs += $expanded }
-            }
-            if ($validTargetDirs.Count -gt 0) {
-                $detected += [PSCustomObject]@{
-                    Name = $agent.name
-                    DisplayName = $agent.displayName
-                    TargetDirs = $validTargetDirs
-                    Verified = $agent.verified
-                    Notes = $agent.notes
-                }
-            }
+        $label = $expanded -replace [regex]::Escape($homeDir), "~"
+        $detected += [PSCustomObject]@{
+            Name = "target"
+            DisplayName = $label
+            TargetDirs = @($expanded)
+            Verified = $true
+            Notes = $null
         }
     }
-
-    # 兜底扫描用户主目录下的 */skills
-    if ($config.fallback.scanHomeForSkillsDirs) {
-        $fallbackDirs = @()
-        foreach ($dir in Get-ChildItem -Path $homeDir -Directory -Force -ErrorAction SilentlyContinue) {
-            $skillsDir = Join-Path $dir.FullName "skills"
-            if (Test-Path $skillsDir) {
-                # 避免重复添加已知 Agent
-                $alreadyKnown = $false
-                $normalizedFallback = [System.IO.Path]::GetFullPath($skillsDir).TrimEnd('\', '/')
-                foreach ($known in $detected) {
-                    foreach ($knownDir in $known.TargetDirs) {
-                        $normalizedKnown = [System.IO.Path]::GetFullPath($knownDir).TrimEnd('\', '/')
-                        if ($normalizedFallback -eq $normalizedKnown) {
-                            $alreadyKnown = $true
-                            break
-                        }
-                    }
-                    if ($alreadyKnown) { break }
-                }
-                if (-not $alreadyKnown) {
-                    $fallbackDirs += $skillsDir
-                }
-            }
-        }
-        if ($fallbackDirs.Count -gt 0) {
-            $detected += [PSCustomObject]@{
-                Name = "fallback"
-                DisplayName = "未知 Agent（兜底扫描）"
-                TargetDirs = $fallbackDirs
-                Verified = $false
-                Notes = "通过扫描用户主目录下的 */skills 目录发现。"
-            }
-        }
-    }
-
     return $detected
 }
 
