@@ -73,4 +73,3 @@ README.md       本文件
 ## 维护
 
 - 使用 `scripts/update-skills.ps1` 拉取本仓库及内部源仓库的最新提交。
-- 修改后提交并推送即可分发新的 npm 包版本。
