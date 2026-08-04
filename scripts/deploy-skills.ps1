@@ -236,7 +236,7 @@ function Discover-Agents {
             $validTargetDirs = @()
             foreach ($t in $agent.targetDirs) {
                 $expanded = Expand-HomePath $t
-                if ($expanded) { $validTargetDirs += $expanded }
+                if ($expanded -and (Test-Path $expanded)) { $validTargetDirs += $expanded }
             }
             if ($validTargetDirs.Count -gt 0) {
                 $detected += [PSCustomObject]@{
@@ -317,11 +317,8 @@ function Deploy-Skill {
     $label = $destination -replace [regex]::Escape($homeDir), "~"
 
     if (-not (Test-Path $TargetDir)) {
-        if ($DryRun) {
-            Write-Info "  [预演] 将创建目录 $label"
-        } else {
-            New-Item -ItemType Directory -Path $TargetDir -Force | Out-Null
-        }
+        Write-Warn "  目标目录不存在，跳过（按配置不新建）：$label"
+        return
     }
 
     if (Test-Path $destination) {
