@@ -4,7 +4,7 @@
 
 本仓库只维护 skill 索引和 Agent 操作说明，不保存 skill 源文件，也不提供部署脚本。
 
-- `scripts/skills-index.json` 是唯一索引文件。
+- `skills-index.json` 是唯一索引文件。
 - `skills` 记录 skill 名称和 GitHub 地址。
 - `agents` 记录 Agent 的检测目录和 skills 目录。
 - `README.md` 和源仓库中的 `README.md` 只作为说明文档，不替代索引。
@@ -15,10 +15,10 @@
 
 ### 1. 读取索引
 
-先读取 `scripts/skills-index.json`，校验以下内容：
+先读取 `skills-index.json`，校验以下内容：
 
 - JSON 可以正常解析。
-- skill 名称不重复，GitHub 地址不为空。
+- skill 名称不重复；已确认来源的 GitHub 地址不为空，`unresolved` skill 不参与自动安装或同步。
 - Agent 映射包含检测目录和至少一个 skills 目录。
 
 不得根据记忆、目录名称或搜索结果自行补充未列入索引的 skill。
@@ -85,16 +85,16 @@
 - 使用 GitHub 私有仓库时复用本机已有 Git 凭据，不要求把凭据写入文件或命令参数。
 - 首次安装和更新前先展示将操作的 Agent、skill、来源地址和目标目录；除非用户明确要求自动执行，否则等待确认。
 - 不覆盖不同来源的同名 skill；发现冲突时停止并报告。
-- 不修改 `scripts/skills-index.json`，除非用户明确要求变更索引。
+- 不修改 `skills-index.json`，除非用户明确要求变更索引。
 
 ## 验证
 
 修改索引或文档后执行：
 
 ```powershell
-$index = Get-Content scripts\skills-index.json -Raw -Encoding UTF8 | ConvertFrom-Json
+$index = Get-Content skills-index.json -Raw -Encoding UTF8 | ConvertFrom-Json
 $index.skills.Count
 $index.agents.Count
 ```
 
-同时确认仓库根目录下没有 skill 源目录，`scripts` 目录中只有索引 JSON 和必要的说明文件。
+同时确认仓库根目录下没有 skill 源目录，且不存在 `scripts` 目录。

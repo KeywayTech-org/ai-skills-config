@@ -1,0 +1,382 @@
+{
+  "skills": [
+    {
+      "name": "agents-md-doctor",
+      "github": null,
+      "status": "unresolved",
+      "note": "未找到可验证的公开 GitHub 源仓库"
+    },
+    {
+      "name": "darwin-skill",
+      "github": "https://github.com/alchaincyf/darwin-skill"
+    },
+    {
+      "name": "grill-me",
+      "github": "https://github.com/mattpocock/skills"
+    },
+    {
+      "name": "luban",
+      "github": "https://github.com/learnprompt/luban-skill"
+    },
+    {
+      "name": "scene-distillation-zine-v1-3",
+      "github": null,
+      "status": "unresolved",
+      "note": "未找到可验证的公开 GitHub 源仓库"
+    },
+    {
+      "name": "scenes-gathered-zine-v1-3",
+      "github": null,
+      "status": "unresolved",
+      "note": "未找到可验证的公开 GitHub 源仓库"
+    },
+    {
+      "name": "taste-skill",
+      "github": null,
+      "status": "unresolved",
+      "note": "未找到可验证的公开 GitHub 源仓库"
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "github": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
+    },
+    {
+      "name": "89jobrien-security-engineering",
+      "github": "https://github.com/89jobrien/steve"
+    },
+    {
+      "name": "addyosmani-code-review-and-quality",
+      "github": "https://github.com/addyosmani/agent-skills"
+    },
+    {
+      "name": "aso",
+      "github": "https://github.com/coreyhaines31/marketingskills"
+    },
+    {
+      "name": "autumnsgrove-git-advanced",
+      "github": "https://github.com/AutumnsGrove/ClaudeSkills"
+    },
+    {
+      "name": "c0ntr0lledcha0s-analyzing-patterns",
+      "github": "https://github.com/C0ntr0lledCha0s/claude-code-plugin-automations"
+    },
+    {
+      "name": "c0ntr0lledcha0s-analyzing-test-quality",
+      "github": "https://github.com/C0ntr0lledCha0s/claude-code-plugin-automations"
+    },
+    {
+      "name": "content-deai-engine",
+      "github": "https://github.com/lanyasheng/content-deai-engine"
+    },
+    {
+      "name": "davila7-senior-devops",
+      "github": "https://github.com/aaaaqwq/claude-code-skills"
+    },
+    {
+      "name": "dbs",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-action",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-agent-migration",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-ai-check",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-benchmark",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-bridge",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-chatroom",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-chatroom-austrian",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-content",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-content-system",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-decision",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-deconstruct",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-diagnosis",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-goal",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-good-question",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-hook",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-knowledge",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-learning",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-report",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-resonate",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-restore",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-save",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-script-flow",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-skill-cleaner",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-slowisfast",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-spread",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-update",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-wechat-html",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "dbs-xhs-title",
+      "github": "https://github.com/dontbesilent2025/dbskill"
+    },
+    {
+      "name": "emilkowalski-apple-design",
+      "github": "https://github.com/emilkowalski/skills"
+    },
+    {
+      "name": "find-skills",
+      "github": "https://github.com/vercel-labs/skills"
+    },
+    {
+      "name": "gsap-core",
+      "github": "https://github.com/greensock/gsap-skills"
+    },
+    {
+      "name": "gsap-frameworks",
+      "github": "https://github.com/greensock/gsap-skills"
+    },
+    {
+      "name": "gsap-performance",
+      "github": "https://github.com/greensock/gsap-skills"
+    },
+    {
+      "name": "gsap-plugins",
+      "github": "https://github.com/greensock/gsap-skills"
+    },
+    {
+      "name": "gsap-react",
+      "github": "https://github.com/greensock/gsap-skills"
+    },
+    {
+      "name": "gsap-scrolltrigger",
+      "github": "https://github.com/greensock/gsap-skills"
+    },
+    {
+      "name": "gsap-timeline",
+      "github": "https://github.com/greensock/gsap-skills"
+    },
+    {
+      "name": "gsap-utils",
+      "github": "https://github.com/greensock/gsap-skills"
+    },
+    {
+      "name": "guizang-ppt-skill",
+      "github": "https://github.com/op7418/guizang-ppt-skill"
+    },
+    {
+      "name": "guizang-social-card-skill",
+      "github": "https://github.com/op7418/guizang-social-card-skill"
+    },
+    {
+      "name": "multi-search-engine",
+      "github": "https://github.com/aaaaqwq/claude-code-skills"
+    },
+    {
+      "name": "no-ai-slop",
+      "github": "https://github.com/petergyang/no-ai-slop"
+    },
+    {
+      "name": "pbakaus-impeccable",
+      "github": "https://github.com/pbakaus/impeccable"
+    },
+    {
+      "name": "seo-ops",
+      "github": null,
+      "status": "unresolved",
+      "note": "未找到可验证的公开 GitHub 源仓库"
+    },
+    {
+      "name": "skill-creator",
+      "github": "https://github.com/anthropics/skills"
+    },
+    {
+      "name": "technical-writer",
+      "github": "https://github.com/awesome-llm-apps/awesome-llm-apps"
+    },
+    {
+      "name": "xhs-real-keywords",
+      "github": "https://github.com/lsuyu899-tech/xhs-real-keywords"
+    }
+  ],
+  "agents": [
+    {
+      "name": "pi",
+      "detectDirs": [
+        "~/.pi"
+      ],
+      "skillsDirs": [
+        "~/.pi/agent/skills"
+      ]
+    },
+    {
+      "name": "agents",
+      "detectDirs": [
+        "~/.agents"
+      ],
+      "skillsDirs": [
+        "~/.agents/skills"
+      ]
+    },
+    {
+      "name": "claude",
+      "detectDirs": [
+        "~/.claude"
+      ],
+      "skillsDirs": [
+        "~/.claude/skills"
+      ]
+    },
+    {
+      "name": "codex",
+      "detectDirs": [
+        "~/.codex"
+      ],
+      "skillsDirs": [
+        "~/.codex/skills"
+      ]
+    },
+    {
+      "name": "cursor",
+      "detectDirs": [
+        "~/.cursor"
+      ],
+      "skillsDirs": [
+        "~/.cursor/skills"
+      ]
+    },
+    {
+      "name": "gemini",
+      "detectDirs": [
+        "~/.gemini"
+      ],
+      "skillsDirs": [
+        "~/.gemini/skills"
+      ]
+    },
+    {
+      "name": "opencode",
+      "detectDirs": [
+        "~/.opencode",
+        "~/.config/opencode"
+      ],
+      "skillsDirs": [
+        "~/.opencode/skills",
+        "~/.config/opencode/skills"
+      ]
+    },
+    {
+      "name": "trae",
+      "detectDirs": [
+        "~/.trae"
+      ],
+      "skillsDirs": [
+        "~/.trae/skills"
+      ]
+    },
+    {
+      "name": "trae-cn",
+      "detectDirs": [
+        "~/.trae-cn"
+      ],
+      "skillsDirs": [
+        "~/.trae-cn/skills"
+      ]
+    },
+    {
+      "name": "kimi",
+      "detectDirs": [
+        "~/.kimi"
+      ],
+      "skillsDirs": [
+        "~/.kimi/skills"
+      ]
+    },
+    {
+      "name": "qwen",
+      "detectDirs": [
+        "~/.qwen"
+      ],
+      "skillsDirs": [
+        "~/.qwen/skills"
+      ]
+    },
+    {
+      "name": "workbuddy",
+      "detectDirs": [
+        "~/.workbuddy"
+      ],
+      "skillsDirs": [
+        "~/.workbuddy/skills"
+      ]
+    }
+  ]
+}
