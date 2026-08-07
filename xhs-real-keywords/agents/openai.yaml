@@ -1,4 +1,0 @@
-interface:
-  display_name: "XHS Real Keywords"
-  short_description: "Get Xiaohongshu keyword evidence from real search pages."
-  default_prompt: "Use $xhs-real-keywords to collect real Xiaohongshu keywords for 新加坡留学."
