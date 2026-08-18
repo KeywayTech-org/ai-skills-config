@@ -1,4 +1,4 @@
-# KeywayTech AI Skills
+# KeywayTech AI Skills Config
 
 面向多种 AI Agent 和 IDE 的 skill 来源索引。
 
