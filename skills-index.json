@@ -10,9 +10,7 @@
     },
     {
       "name": "agents-md-doctor",
-      "github": null,
-      "status": "unresolved",
-      "note": "未找到可验证的公开 GitHub 源仓库"
+      "github": "https://github.com/daniel-p-green/codex-skill_secret-agents-dot-md-doctor"
     },
     {
       "name": "aso",
@@ -216,15 +214,11 @@
     },
     {
       "name": "scene-distillation-zine-v1-3",
-      "github": null,
-      "status": "unresolved",
-      "note": "未找到可验证的公开 GitHub 源仓库"
+      "github": "https://github.com/Zeejay0/gathered-scenes-zine-skill"
     },
     {
       "name": "scenes-gathered-zine-v1-3",
-      "github": null,
-      "status": "unresolved",
-      "note": "未找到可验证的公开 GitHub 源仓库"
+      "github": "https://github.com/Zeejay0/gathered-scenes-zine-skill"
     },
     {
       "name": "skill-creator",
@@ -232,9 +226,7 @@
     },
     {
       "name": "taste-skill",
-      "github": null,
-      "status": "unresolved",
-      "note": "未找到可验证的公开 GitHub 源仓库"
+      "github": "https://github.com/Leonxlnx/taste-skill"
     }
   ],
   "agents": [
