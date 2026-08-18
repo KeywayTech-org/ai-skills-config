@@ -265,6 +265,170 @@
     {
       "name": "xhs-real-keywords",
       "github": "https://github.com/lsuyu899-tech/xhs-real-keywords"
+    },
+    {
+      "name": "algorithmic-color-palette",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "authentic-product-representation",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "brand-visual-language",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "button-states",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "color-mode-and-theme",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "component-family-consistency",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "coordinated-data-views",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "data-display-and-selection",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "dembrandt",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "domain-expert-configuration",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "elevation-and-depth",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "extract-design",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "form-design",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "generate-ui-from-brand",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "gestalt-ui-organisation",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "global-toolbar-controls",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "information-architecture",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "layout-paradigms-and-consistency",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "loading-states-and-perceived-performance",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "micro-interactions",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "modal-and-overlay-patterns",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "modular-scale-typography",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "motion-and-storytelling",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "nielsen-usability-heuristics",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "notifications-and-recovery",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "operational-expert-tool-ui",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "performance-and-web-vitals",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "real-world-metaphors",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "repeated-component-alignment",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "responsive-paradigms",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "scroll-areas",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "semantic-html-and-seo",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "status-colors-and-errors",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "sticky-and-fixed-elements",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "tab-navigation",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "ui-context-and-scope",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "ui-density",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "user-flows-and-guided-paths",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "victor-design",
+      "github": "https://github.com/victorzhang016-code/victor-design.git"
+    },
+    {
+      "name": "visual-emphasis-and-hierarchy",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
+    },
+    {
+      "name": "wcag-accessibility",
+      "github": "https://github.com/dembrandt/dembrandt-skills"
     }
   ],
   "agents": [
