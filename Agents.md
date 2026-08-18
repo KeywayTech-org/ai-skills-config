@@ -1,4 +1,4 @@
-# KeywayTech AI Skills
+# KeywayTech AI Skills Config
 
 ## 仓库职责
 
